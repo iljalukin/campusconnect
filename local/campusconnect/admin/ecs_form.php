@@ -97,7 +97,7 @@ class campusconnect_ecs_form extends moodleform {
         $mform->disabledIf('httpuser', 'auth', 'neq', ecssettings::AUTH_HTTP);
         $mform->setType('httpuser', PARAM_TEXT);
 
-        $mform->addElement('text', 'httppass', get_string('password', 'local_campusconnect'));
+        $mform->addElement('password', 'httppass', get_string('password', 'local_campusconnect'));
         $mform->disabledIf('httppass', 'auth', 'neq', ecssettings::AUTH_HTTP);
         $mform->setType('httppass', PARAM_RAW);
 
